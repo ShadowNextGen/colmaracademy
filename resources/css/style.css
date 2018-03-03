@@ -1,347 +1,499 @@
-html {
-  font-size: 16px;
-}
+/* Stylesheet for Colmar Academy */
+
+/* Universal */
 body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
   margin: 0;
 }
-a {
-  text-decoration: none;
-}
-nav {
+
+/* Header */
+.header-container,
+.header-logo,
+.logo-name {
   display: flex;
-  height: 64px;
+  align-items: center;
+  height: 4rem;
 }
+
+.header-logo {
+  margin-left: 1.5rem;
+  margin-right: auto;
+  font-family: 'Merriweather Sans';
+}
+
 h1 {
-  font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: 32px;
 }
+
 h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-h3 {
-  font-size: 1.17em;
-  font-weight: bold;
+  color: hsl(34, 9%, 56%);
 }
 
-h4 {
-  margin-bottom: 24px;
+.header-container nav ul li {
+  display: inline-block;
+  list-style-type: none;
 }
 
-button {
-  background: purple;
-  width: 100%;
-  padding: 8px 0;
-  color: white;
+.nav-item {
+  font-size: 0.85rem;
+  margin-right: 1rem;
 }
 
-.desktop {
+.nav-item:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+header .mobile {
   display: none;
 }
 
-.mobile {
-  display: flex;
-  justify-content: space-around;
-
-  width: 100%;
-  padding: 0;
-
-}
-
-.navigation {
-  align-items: center;
-}
-nav li {
-  list-style: none;
-  display: flex;
-}
-
-nav li > a {
-  color: black;
-}
-
-img, video {
-  width: 100%;
-  height: auto;
-}
-
-@media only screen and (min-width: 580px) {
-  .mobile {
+/* Header - Mobile */
+@media only screen and (max-width: 480px) {
+  header .desktop,
+  header .logo-name {
     display: none;
   }
-  .desktop {
-    display: flex;
-    margin-left: 24px;
-    padding-left: 0;
+
+  header .mobile {
+    display: block;
     width: 100%;
   }
-  .logo {
-    text-transform: uppercase;
+
+  header .mobile ul {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    flex: 1;
+    width: 100%;
   }
-  .logo a {
+}
+
+/* Banner */
+.banner-container {
+  display: flex;
+  font-family: 'Roboto';
+  background-color: hsl(34, 9%, 91%);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2.5rem;
+}
+
+.banner-container img{
+  width: 60%;
+  height: 100%;
+  padding: 2rem 2.5rem 2rem 1.5rem;
+}
+
+.banner-content h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: hsl(34, 9%, 31%);
+}
+
+.banner-content p {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: hsl(34, 9%, 31%);
+}
+
+.button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(34, 9%, 31%);
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Banner - Mobile */
+@media only screen and (max-width: 480px) {
+  .banner-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
   }
-  .logo span {
-    font-weight: bold;
+  .banner-container img {
+    height: 11.25rem;
+    width: 80%;
   }
-  nav li:nth-child(n+1) {
-    margin-right: 16px;
+  .banner-content h3 {
+    font-size: 1.75rem;
   }
-  nav li:last-child {
-    margin-right: 24px;
+  .banner-content {
+    margin-left: 1rem;
   }
 }
 
-main {
-
+/* Info */
+.info-container {
+  display: flex;
+  background-color: hsl(0, 0%, 95%);
 }
 
-.practice {
-  display: none;
+.info-feature {
+  width: 70%;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
 }
 
-.banner {
+.info-feature img{
+  width: 95%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.info-feature p,
+.info-feature h4,
+.info-feature h5 {
+  padding-left: 1.5rem;
+  display: inline-block;
+}
+
+.info-container h4,
+.courses-container h4,
+.thesis-container h4 {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: hsl(34, 9%, 31%);
+  margin-bottom: 1.5rem;
+}
+
+.info-container h5 {
+  font-family: 'Merriweather Sans';
+  font-size: 0.90rem;
+}
+
+.info-feature p {
+  padding-bottom: 1.5rem;
+  font-family: 'Raleway';
+  font-size: 1rem;
+}
+
+.info-stories {
+  width: 26.44rem;
+  border-left: 1px solid hsl(34, 3%, 81%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.info-story {
+  height: 33%;
   width: 100%;
-  height: 180px;
-  background: url('https://github.com/ShadowNextGen/colmaracademy/blob/master/resources/images/banner.jpg');
-  background-size: cover;
+  margin-right: 1.5rem;
 }
 
-.banner img {
-  display: none;
-}
-
-.start-here {
-  padding: 32px 16px;
-}
-
-@media only screen and (min-width: 800px) {
-  .learn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: grey;
+/* Info - Desktop only */
+@media only screen and (min-width: 480px) {
+  .info-story img {
+    width: 35%;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    float: left;
   }
-  .banner {
-    background: none;
-    height: auto;
-    width: 60%;
-    padding: 32px 24px;
-  }
-  .banner img {
-    display: flex;
-  }
-  .start-here {
-    max-width: 423px;
-  }
-  .start-here h1 {
-    font-size: 4vw;
+  .image-mobile {
+    display: none;
   }
 }
 
-
-.information {
-  padding: 16px 16px 32px;
+.info-content h6,
+.course-container h6,
+.thesis-feature h6,
+.thesis-exhibit h6 {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.information-text {
-  padding: 8px 16px;
+.info-content h6,
+.course-container h6,
+.thesis-exhibit h6 {
+  padding-top: 3rem;
 }
 
-.information-text h3, .information-text p {
-  margin-bottom: 8px;
+.info-content p {
+  font-family: 'Raleway';
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.info-thumb {
-  height: 150px;
+.read-more {
+  color: blue;
+  font-size: 0.75rem;
+}
+
+/* Info - Mobile */
+@media only screen and (max-width: 480px) {
+  .info-feature,
+  .image-desktop {
+    display: none;
+    }
+  .info-story {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .image-mobile {
+    width: 85%;
+    margin-top: 1rem;
+  }
+  .info-content {
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+  .info-content h6 {
+    padding-top: 1rem;
+  }
+}
+
+/* Courses */
+
+.courses-container {
+  background-color: hsl(66, 3%, 91%);
+}
+
+.courses-container h4 {
+  padding-top:2rem;
+  text-align: center;
+}
+
+.courses-programs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.courses-content {
+  /* flex: 1 1 calc(25% - 20px); /* flex-grow, flex-shrink,
+                                  flex-basis: (width - margin) */
+  height: 18.25rem;
+  width: 18.25rem;
+  background-color: hsl(0, 0%, 100%);
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  transition: font-size 2s;
+  transition-timing-function: ease-out;
+}
+
+.courses-content:hover {
+  font-size: 150%;
+}
+
+.courses-content:hover .course-names p {
+  font-size: 75%;
+}
+
+.courses-header {
+  height: 13.75rem;
+}
+
+.courses-content .courses-image {
+  width: 100%;
+  height: 65%;
+  margin: 0 auto;
+}
+
+.courses-image {
   overflow: hidden;
 }
 
+.courses-image img {
+  display: block;
+  max-width: 100%;
+}
 
-@media only screen and (min-width: 800px) {
-  .information {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
+.courses-content h6 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: hsl(34, 9%, 31%);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.course-title,
+.course-names p,
+.thesis-content p {
+  color: hsl(34, 9%, 59%);
+}
+
+.course-title {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.course-names p,
+.thesis-content p,
+.course-title {
+  font-family: 'Merriweather Sans';
+  font-size: 0.80rem;
+}
+
+.course-names p {
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Course - Mobile */
+@media only screen and (max-width: 480px) {
+  .courses-programs {
+    padding-bottom: 2rem;
   }
-  .practice {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: 32px 24px;
+  .courses-image,
+  .course-title,
+  .course-names {
+    display: none;
   }
-  .practice img {
-    min-height: 350px;
+  .courses-container h4 {
+    margin-bottom: 1rem;
   }
-  .practice h2 {
-    margin-top: 32px;
-    margin-bottom: 24px;
+  .courses-content {
+    height: auto;
+    background-color: hsl(34, 3%, 84%);
+    margin-bottom: 0.5rem;
   }
-  .info-thumb {
+  .courses-header {
     height: auto;
   }
-  .orientation, .campus, .guest-lectures {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-bottom: 1px solid grey;
-    padding: 16px;
-    max-width: 423px;
-  }
-  .orientation img, .campus img, .guest-lectures img {
-    width: 35%;
-  }
-  .information-features div:first-child {
-    margin-top: 16px;
-  }
-  .information div:nth-child(n+2) {
-    border-top: none;
-  }
-  .information-features {
-    border-left: 1px solid grey;
-    padding-bottom: 32px;
-  }
-  blockquote > footer {
-    margin-top: 32px;
+  .courses-header h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
-.featured-courses {
-  padding: 32px 16px;
+/* Thesis */
+.thesis-container {
+  background-color: hsl(0, 0%, 95%);
 }
 
-.featured-courses h2, .exhibition-featured h2 {
+.thesis-container h4 {
   text-align: center;
-  width: 100%;
-  padding-bottom: 16px;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
 }
 
-.featured-courses img, .featured-courses .course-info p {
-  display: none;
+.thesis-exhibits-content {
+  display: flex;
 }
 
-.course-info > h3 {
-  padding: 16px;
-  background: grey;
-  margin-bottom: 8px;
+.thesis-feature {
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  margin-left: 1.5rem;
 }
 
+/*
+.thesis-feature video:hover {
+  cursor: pointer;
+}  */
 
-@media only screen and (min-width: 550px) {
-  .featured-courses {
-    background: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .featured-courses img, .featured-courses .course-info p {
-    display: flex;
-  }
-  .featured-courses img {
-    height: 154px;
-  }
-  .course-info h3, .course-info {
-    background: white;
-  }
-  .course-info p {
-    padding: 0 16px 8px;
-  }
-  .course-info p:last-child {
-    padding: 0 16px 24px;
-  }
-  .course-card {
-    width: 350px;
-    margin-right: 32px;
-    margin-bottom: 24px;
-  }
-  .course-info {
-    min-height: 154px;
-  }
+.thesis-feature h6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-
-.recent-exhibits, .exhibit-vid h3, .exhibit-vid p {
-  display: none;
+.thesis-feature p {
+  font-size: 85%;
+  padding-bottom: 2rem;
 }
 
-.exhibition-featured h2 {
-  padding: 32px 0;
+.thesis-exhibits {
+  width: 26.44rem;
 }
 
+.thesis-exhibit {
+  height: 10.5rem;
+}
 
-@media only screen and (min-width: 750px) {
+.thesis-exhibit:hover {
+  background-color: hsl(66, 3%, 91%);
+}
 
-  .recent-exhibits {
-    display: block;
+.thesis-exhibit img {
+  float: left;
+  width: 35%;
+  height: 80%;
+  margin: 1rem;
+}
+
+.thesis-content p {
+  margin-top: 1rem;
+}
+
+/* Thesis - Mobile */
+@media only screen and (max-width: 480px) {
+  .thesis-feature h6,
+  .thesis-feature p,
+  .thesis-exhibits,
+  .thesis-exhibit {
+    display: none;
   }
-  .exhibition-container {
-    display: flex;
-    flex-direction: row;
-    padding-left: 24px;
-    margin-bottom: 32px;
+  .thesis-container {
+    margin-bottom: 1.5rem;
   }
-  .exhibit-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px;
-    max-width: 423px;
-    height: 168px;
+
+  .thesis-container h4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
-  .exhibit-card img {
-    width: 35%;
-    margin-right: 16px;
-  }
-  .exhibit-info {
-    display: flex;
-    flex-direction: column;
-  }
-  .exhibit-card:first-child {
-    background: lightgrey;
-  }
-  .exhibit-vid {
-    margin-right: 24px;
-    width: 60%;
-  }
-  .exhibit-vid h3, .exhibit-vid p {
-    display: flex;
-    flex-direction: column;
-    padding-top: 24px;
+  .thesis-feature {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
   }
 }
 
-footer > nav {
-  display: none;
+/* Footer */
+.footer-container {
+  margin-left: 1.5rem;
+  margin-right: auto;
+  font-family: 'Merriweather Sans';
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 75%;
 }
 
-footer {
-  padding: 32px 0;
+.footer-container h6 {
+  margin-right: auto;
 }
 
-.copyright {
-  margin-left: 24px;
+.footer-social {
+  text-align: center;
+  margin-right: auto;
 }
 
-@media only screen and (min-width: 400px) {
-  footer {
-    padding: 16px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  footer > nav {
-    display: flex;
-  }
-  footer > nav ul {
-    display: flex;
-    flex-direction: row;
-  }
-  footer > nav ul li:first-child {
-    margin-right: 16px;
+.footer-social i {
+  margin-right: 0.5rem;
+}
+
+footer nav ul {
+  display: flex;
+}
+
+footer nav ul li {
+  margin-right: 1rem;
+}
+
+footer nav ul li:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Footer - Mobile */
+@media only screen and (max-width: 480px) {
+  .footer-container nav {
+    display: none;
   }
 }
