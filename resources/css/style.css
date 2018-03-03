@@ -490,7 +490,7 @@ footer nav ul li {
 footer nav ul li:hover {
   background-color: hsl(0, 0%, 95%);
 }
-
+ 
 /* Footer - Mobile */
 @media only screen and (max-width: 480px) {
   .footer-container nav {
